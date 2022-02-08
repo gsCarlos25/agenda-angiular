@@ -1,0 +1,8 @@
+<div class="botones">
+    <button (click)="mostrarTodas()">Todas</button>
+    <button (click)="mostrarCompletadas()">Completadas</button>
+    <button (click)="mostrarNoCompletadas()">Sin completar</button>
+</div>
+<div class="informacion">
+<p>Hay {{this.storage.tareas.length}} tareas, {{tareasCompletadas()}} completadas y {{this.storage.tareas.length - tareasCompletadas()}} sin completar</p>
+<button ngShow="this.storage.tareasCompletadas)() > 0" (click)="borrarCompletada()">Borrar todas las tareas completadas</button>

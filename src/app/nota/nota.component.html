@@ -1,0 +1,12 @@
+<ul ngShow="tareas.length > 0">
+        <li *ngFor="let tarea of this.storage.tareasIntroducidas; index as i;" :key="i">
+        <span (click)="completarTarea(i)" [ngClass] = "tarea.completada ? 'completada' : 'pendiente'"> {{tarea.nombre}}  {{tarea.prioridad == 0 ? "media":tarea.prioridad == 1 ? "alta":"baja"}}&nbsp;  {{this.storage.tiempoTranscurrido(i)}} minutos </span>
+        <button class="botones" (click)="borrarTarea(i)">Borrar</button>
+        <div class="botones"> 
+            <button (click)="prioridadAlta(i)">Alta</button>
+            <button (click)="prioridadMedia(i)">Media</button>
+            <button (click)="prioridadBaja(i)">Baja</button>
+        </div>
+        </li>
+</ul>
+    

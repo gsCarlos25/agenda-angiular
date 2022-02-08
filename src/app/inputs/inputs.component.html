@@ -1,0 +1,2 @@
+<input type="text" id="buscador" (keyup)="buscarTarea()" placeholder="Buscar..." [(ngModel)]="this.storage.textoBuscar"/>
+<input type="text" id="nombreTarea" [(ngModel)]="this.storage.nombreTarea" (keyup.enter)="insertarTarea()" placeholder="Nombre tarea..."/>
